@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="1" type="text" value="">
+<button id="2" type="button" onclick="month()">Tinh so ngay</button>
+<p id="3"></p>
+<script>
+    function month() {
+        var x = +document.getElementById("1").value;
+        switch (x) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+                document.getElementById("3").innerHTML = "thang " +x+ " co 31 ngay"
+                break;
+            case 2:
+                document.getElementById("3").innerHTML = "thang 2 co 28,29 ngay"
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            case 12:
+                document.getElementById("3").innerHTML="thang " +x+ " co 30 ngay"
+            break;
+            default:
+                document.getElementById("3").innerHTML="khong co thang nay"
+                break;
+
+
+
+
+        }
+    }
+</script>
+
+</body>
+</html>
